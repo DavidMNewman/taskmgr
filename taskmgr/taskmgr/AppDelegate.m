@@ -8,14 +8,25 @@
 
 #import "AppDelegate.h"
 
+#define IPAD UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIStoryboard *mainStoryboard = nil;
+    
+    if (IPAD) {
+        mainStoryboard = [UIStoryboard storyboardWithName:@"Storyboard_iPad" bundle:nil];
+
+    }else{
+        mainStoryboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    }
+    
+    self.window.rootViewController = [mainStoryboard instantiateInitialViewController];
+    
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
