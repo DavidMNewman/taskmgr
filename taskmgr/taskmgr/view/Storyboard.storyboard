@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="cBZ-oI-fid">
+    <dependencies>
+        <deployment version="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - Task Manager-->
+        <scene sceneID="E5N-2O-s0g">
+            <objects>
+                <navigationController title="Task Manager" definesPresentationContext="YES" id="cBZ-oI-fid" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bt1-Vg-5Zv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.45882352941176469" green="0.80784313725490198" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EGQ-fV-X6J" kind="relationship" relationship="rootViewController" id="nKO-pC-9Wd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqm-BJ-UYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="98"/>
+        </scene>
+        <!--Task List View Controller - Task List-->
+        <scene sceneID="SfO-0d-UQU">
+            <objects>
+                <viewController title="Task List" id="EGQ-fV-X6J" customClass="TaskListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tki-r2-TgY">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" id="QKb-fr-vmX">
+                                <rect key="frame" x="0.0" y="45" width="320" height="371"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="cellTask" rowHeight="60" id="Ip1-qc-J62">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Task Description Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ktC-f6-XFb">
+                                                    <rect key="frame" x="55" y="8" width="245" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="12-22-2012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gw6-oc-71t">
+                                                    <rect key="frame" x="55" y="38" width="127" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="MEDIUM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S2R-to-WLK">
+                                                    <rect key="frame" x="230" y="35" width="70" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NqV-G3-uaZ">
+                                                    <rect key="frame" x="10" y="15" width="30" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" image="btn-complete-task.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="cellTaskComplete" rowHeight="60" id="JJE-Lp-KjB">
+                                        <rect key="frame" x="0.0" y="82" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="Task Description Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2e7-xi-Kxt">
+                                                    <rect key="frame" x="55" y="8" width="245" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="12-22-2012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NwR-Kb-RND">
+                                                    <rect key="frame" x="55" y="38" width="127" height="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="MEDIUM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YI9-pb-Z7S">
+                                                    <rect key="frame" x="230" y="35" width="70" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EGQ-fV-X6J" id="CCo-2T-XcH"/>
+                                    <outlet property="delegate" destination="EGQ-fV-X6J" id="9zL-f2-F73"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" id="8l5-NU-FAP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EGQ-fV-X6J" id="MAP-xm-ogz"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Task List" id="alQ-3C-MHd">
+                        <barButtonItem key="leftBarButtonItem" title="Options" id="JGK-sU-ShH">
+                            <connections>
+                                <action selector="taskOptions:" destination="EGQ-fV-X6J" id="1Q0-rF-ecn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Fu-eL-zxo">
+                            <connections>
+                                <segue destination="RFn-qt-gzf" kind="push" id="u5b-zW-JdF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableViewTasks" destination="QKb-fr-vmX" id="Y6c-y7-wce"/>
+                        <outlet property="tasksSearchBar" destination="8l5-NU-FAP" id="tz5-4d-b8S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qqa-9f-gNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="98"/>
+        </scene>
+        <!--Task Form View Controller - New Task-->
+        <scene sceneID="SbI-6g-xde">
+            <objects>
+                <viewController title="New Task" id="RFn-qt-gzf" customClass="TaskFormViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZtY-sx-GH7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zVS-FA-Jwj">
+                                <rect key="frame" x="31" y="66" width="80" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Priority" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4mr-O9-s8z">
+                                <rect key="frame" x="31" y="210" width="80" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dpt-fu-M7E">
+                                <rect key="frame" x="31" y="138" width="80" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="VyJ-q6-xlg">
+                                <rect key="frame" x="0.0" y="232" width="320" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Required" minimumFontSize="17" id="9OX-Uu-nM2">
+                                <rect key="frame" x="31" y="88" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDescriptionEdited:" destination="RFn-qt-gzf" eventType="editingChanged" id="ALo-WA-caG"/>
+                                    <outlet property="delegate" destination="RFn-qt-gzf" id="OYy-aO-AM9"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional" minimumFontSize="17" id="qhp-X4-NnM">
+                                <rect key="frame" x="31" y="160" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RFn-qt-gzf" id="cxN-CU-TmJ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Task" id="Ch7-xz-dBw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Q8Q-q0-USO">
+                            <connections>
+                                <action selector="cancelButton:" destination="RFn-qt-gzf" id="ZlS-W7-27I"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="JXs-Ra-Ma4">
+                            <connections>
+                                <action selector="saveTask:" destination="RFn-qt-gzf" id="3q4-rA-z46"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonSave" destination="JXs-Ra-Ma4" id="6g3-u6-eWb"/>
+                        <outlet property="textFieldDescription" destination="9OX-Uu-nM2" id="eGg-ge-reb"/>
+                        <outlet property="textFieldDueDate" destination="qhp-X4-NnM" id="fxk-sx-xkZ"/>
+                        <outlet property="viewSegmentedControlContainer" destination="VyJ-q6-xlg" id="wsg-1A-pV2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPP-v6-CKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn-complete-task.png" width="21" height="20"/>
+    </resources>
+    <classes>
+        <class className="TaskFormViewController" superclassName="TaskMGRViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskFormViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButton:"/>
+                <relationship kind="action" name="incidentDateValueChanged:"/>
+                <relationship kind="action" name="saveTask:"/>
+                <relationship kind="action" name="textFieldDescriptionEdited:" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="buttonSave" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="textFieldDescription" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textFieldDueDate" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewSegmentedControlContainer" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="TaskListViewController" superclassName="TaskMGRViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="taskOptions:"/>
+                <relationship kind="outlet" name="tableViewTasks" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="tasksSearchBar" candidateClass="UISearchBar"/>
+            </relationships>
+        </class>
+        <class className="TaskMGRViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskMGRViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
