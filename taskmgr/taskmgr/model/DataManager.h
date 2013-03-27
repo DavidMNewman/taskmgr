@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "NSManagedObjectContext-EasyFetch.h"
 
-extern NSString * const DataManagerDidSaveNotification;
-extern NSString * const DataManagerDidSaveFailedNotification;
+extern NSString *const DataManagerDidSaveNotification;
+extern NSString *const DataManagerDidSaveFailedNotification;
 
 
 @interface DataManager : NSObject
@@ -19,7 +19,7 @@ extern NSString * const DataManagerDidSaveFailedNotification;
 @property (nonatomic, readonly, retain) NSManagedObjectContext *mainObjectContext;
 @property (nonatomic, readonly, retain) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-+ (DataManager*)sharedInstance;
++ (DataManager *)sharedInstance;
 
 - (BOOL)save;
 
