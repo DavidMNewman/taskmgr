@@ -40,7 +40,7 @@
  *
  * The objects are returned in the order specified by Core Data.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName;
 
 #pragma mark -
 #pragma mark Fetch all sorted
@@ -51,9 +51,9 @@
  * The objects are returned in the order specified by the provided key and
  * order.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName
-                            sortByKey:(NSString*)key
-                            ascending:(BOOL)ascending;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName
+                             sortByKey:(NSString *)key
+                             ascending:(BOOL)ascending;
 
 /** @brief Convenience method to fetch all objects for a given Entity name in
  * the context.
@@ -62,8 +62,8 @@
  * order specified by the sort descriptors. Otherwise, the objects are returned
  * in the order specified by Core Data.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName
-                             sortWith:(NSArray*)sortDescriptors;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName
+                              sortWith:(NSArray *)sortDescriptors;
 
 #pragma mark -
 #pragma mark Fetch filtered unsorted
@@ -76,8 +76,8 @@
  *
  * The objects are returned in the order specified by Core Data.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName
-                        withPredicate:(NSPredicate*)predicate;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName
+                         withPredicate:(NSPredicate *)predicate;
 
 /** @brief Convenience method to fetch selected objects for a given Entity name
  * in the context.
@@ -87,8 +87,8 @@
  *
  * The objects are returned in the order specified by Core Data.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName
-                  predicateWithFormat:(NSString*)predicateFormat, ...;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName
+                   predicateWithFormat:(NSString *)predicateFormat, ...;
 
 #pragma mark -
 #pragma mark Fetch filtered sorted
@@ -102,10 +102,10 @@
  * The objects are returned in the order specified by the provided key and
  * order.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName
-                            sortByKey:(NSString*)key
-                            ascending:(BOOL)ascending
-                        withPredicate:(NSPredicate*)predicate;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName
+                             sortByKey:(NSString *)key
+                             ascending:(BOOL)ascending
+                         withPredicate:(NSPredicate *)predicate;
 
 /** @brief Convenience method to fetch selected objects for a given Entity name
  * in the context.
@@ -113,9 +113,9 @@
  * If the predicate is not nil, the selection is filtered by the provided
  * predicate.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName
-                            sortWith:(NSArray*)sortDescriptors
-                        withPredicate:(NSPredicate*)predicate;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName
+                              sortWith:(NSArray *)sortDescriptors
+                         withPredicate:(NSPredicate *)predicate;
 
 /** @brief Convenience method to fetch selected objects for a given Entity name
  * in the context.
@@ -126,10 +126,10 @@
  * The objects are returned in the order specified by the provided key and
  * order.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName
-                            sortByKey:(NSString*)key
-                            ascending:(BOOL)ascending
-                  predicateWithFormat:(NSString*)predicateFormat, ...;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName
+                             sortByKey:(NSString *)key
+                             ascending:(BOOL)ascending
+                   predicateWithFormat:(NSString *)predicateFormat, ...;
 
 /** @brief Convenience method to fetch selected objects for a given Entity name
  * in the context.
@@ -141,7 +141,7 @@
  * order specified by the sort descriptors. Otherwise, the objects are returned
  * in the order specified by Core Data.
  */
-- (NSArray*)fetchObjectsForEntityName:(NSString*)entityName
-                             sortWith:(NSArray*)sortDescriptors
-                  predicateWithFormat:(NSString*)predicateFormat, ...;
+- (NSArray *)fetchObjectsForEntityName:(NSString *)entityName
+                              sortWith:(NSArray *)sortDescriptors
+                   predicateWithFormat:(NSString *)predicateFormat, ...;
 @end
