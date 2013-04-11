@@ -230,10 +230,6 @@
         <class className="TaskFormViewController" superclassName="TaskMGRViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskFormViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cancelButton:"/>
-                <relationship kind="action" name="incidentDateValueChanged:"/>
-                <relationship kind="action" name="saveTask:"/>
-                <relationship kind="action" name="textFieldDescriptionEdited:" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="buttonSave" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="textFieldDescription" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textFieldDueDate" candidateClass="UITextField"/>
@@ -243,7 +239,6 @@
         <class className="TaskListViewController" superclassName="TaskMGRViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskListViewController.h"/>
             <relationships>
-                <relationship kind="action" name="taskOptions:"/>
                 <relationship kind="outlet" name="tableViewTasks" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="tasksSearchBar" candidateClass="UISearchBar"/>
             </relationships>

@@ -41,6 +41,7 @@
 
 -(void)getAllTasks {
     [self.delegate showStatusWithMessage:@"Connecting"];
+    
     [self commandWithParams:nil URL:kAPIURL requestMethod:@"GET" attempts:3 onCompletion:^(id json) {
         
         if ([json isKindOfClass:[NSArray class]]) {
@@ -143,7 +144,6 @@
 - (void)commandWithParams:(NSMutableDictionary *)params URL:(NSString *)url requestMethod:(NSString *)method attempts:(int)attempts onCompletion:(JSONResponseBlock)completionBlock {
     
     [_httpClient setParameterEncoding:AFJSONParameterEncoding];
-    
     NSMutableURLRequest *apiRequest = [_httpClient requestWithMethod:method path:url parameters:params];
     
     [apiRequest setTimeoutInterval:30.0];

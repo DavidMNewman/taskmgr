@@ -198,19 +198,6 @@
         <image name="btn-complete-task.png" width="21" height="20"/>
     </resources>
     <classes>
-        <class className="TaskFormViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskFormViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelButton:"/>
-                <relationship kind="action" name="incidentDateValueChanged:"/>
-                <relationship kind="action" name="saveTask:"/>
-                <relationship kind="action" name="textFieldDescriptionEdited:" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="buttonSave" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="textFieldDescription" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textFieldDueDate" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="viewSegmentedControlContainer" candidateClass="UIView"/>
-            </relationships>
-        </class>
         <class className="TaskListViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskListViewController.h"/>
             <relationships>

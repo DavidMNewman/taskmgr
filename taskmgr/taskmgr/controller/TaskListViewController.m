@@ -50,7 +50,6 @@
     selectedStatus = kStatusPending;
     [self reloadTaskData];
     
-
     isFiltered = NO;
 }
 
