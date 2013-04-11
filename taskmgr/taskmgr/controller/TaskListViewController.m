@@ -45,12 +45,7 @@
     [[APIController sharedController] setDelegate:self];
     selectedStatus = kStatusPending;
     [self reloadTaskData];
-<<<<<<< HEAD
     
-=======
-
-
->>>>>>> master
     isFiltered = NO;
 }
 
